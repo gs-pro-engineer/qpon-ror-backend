@@ -1,0 +1,4 @@
+$("#new_form").hide();
+$("#new_form form")[0].reset();
+$("#coupon_type_list tbody").append("#{j render 'coupon_type_list_item', ct: @coupon_type}");
+$("#coupon_type_options").show();

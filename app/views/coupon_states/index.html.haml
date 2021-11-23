@@ -1,0 +1,31 @@
+%h1 Estados de Cupones
+
+%table#coupon_state_list
+	%thead
+		%tr
+			%th Estado de cupon
+			%th{ colspan: "2"} Opciones
+	%tbody
+		- @coupon_states.each do |cs|
+			%tr
+				= render "coupon_state_list_item", cs: cs
+
+#coupon_state_options{ style: "padding: 10px; margin: 10px;"}
+	=link_to "Crear nuevo tipo de cupon", "#", class: :new_coupon_state
+
+#update_form{style: "display: none; padding: 10px; margin: 10px;"}
+	=form_tag update_coupon_state_path, remote: :true do
+		=hidden_field_tag "update_id"
+		.formField
+			=label_tag "new_name","Nuevo Nombre: "
+			=text_field_tag "new_name"
+		.formField
+			=submit_tag
+
+#new_form{style: "display: none; padding: 10px; margin: 10px;"}
+	=form_tag create_coupon_state_path, remote: :true do
+		.formField
+			=label_tag "name", "Nombre: "
+			=text_field_tag "name"
+		.formField
+			=submit_tag

@@ -1,0 +1,4 @@
+$(".toChange").remove();
+$("#coupon_type_list tbody").append("#{j render 'coupon_type_list_item', ct: @coupon_type}");
+$("#update_form form")[0].reset();
+$("#update_form").hide()

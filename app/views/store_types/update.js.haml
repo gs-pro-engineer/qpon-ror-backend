@@ -1,0 +1,4 @@
+$(".toChange").remove();
+$("#store_type_list tbody").append("#{j render 'store_type_list_item', s: @store_type}");
+$("#update_form form")[0].reset();
+$("#update_form").hide()

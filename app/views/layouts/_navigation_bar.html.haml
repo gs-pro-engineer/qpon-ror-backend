@@ -1,0 +1,56 @@
+%ul
+	%li
+		=link_to "Inicio", root_path
+	%li
+		=link_to "Cupones", coupons_path
+	%li
+		=link_to "Tipo de Cupones", index_coupon_type_path
+	%li
+		=link_to "Estado del cupon",  index_coupon_state_path
+	%li
+		=link_to "Tipo de Tiendas", index_store_type_path
+	%li
+		=link_to "Tiendas", "#"
+
+#consortia
+	%h2	Consorcios
+	%ul
+		-if consortium_signed_in?
+			%li
+				= link_to "(Consorcio) Editar perfil", edit_consortium_registration_path
+			%li
+				= link_to "(Consorcio) Cerrar sesion", destroy_consortium_session_path, method: :delete
+		-else
+			%li
+				= link_to "(Consorcio) Registrarse", new_consortium_registration_path
+			%li
+				= link_to "(Consorcio) Iniciar Sesion", new_consortium_session_path
+
+#admins
+	%h2	Administradores
+	%ul
+		-if admin_signed_in?
+			%li
+				= link_to "(Administrador) Editar perfil", edit_admin_registration_path
+			%li
+				= link_to "(Administrador) Cerrar sesion", destroy_admin_session_path, method: :delete
+		-else
+			%li
+				= link_to "(Administrador) Registrarse", new_admin_registration_path
+			%li
+				= link_to "(Administrador) Iniciar Sesion", new_admin_session_path
+
+#users
+	%h2 Usuarios
+	%ul
+		-if user_signed_in?
+			%li
+				= link_to "Editar perfil", edit_user_registration_path
+			%li
+				= link_to "Cerrar sesion", destroy_user_session_path, method: :delete
+		-else
+			%li
+				= link_to "Registrarse", new_user_registration_path
+			%li
+				= link_to "Iniciar Sesion", new_user_session_path
+

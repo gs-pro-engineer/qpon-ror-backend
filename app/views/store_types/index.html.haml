@@ -1,0 +1,31 @@
+%h1 Tipos de Tienda
+
+%table#store_type_list
+	%thead
+		%tr
+			%th Tipo de tienda
+			%th{ colspan: "2"} Opciones
+	%tbody
+		- @store_types.each do |s|
+			%tr
+				= render "store_type_list_item", s: s
+
+#store_type_options{ style: "padding: 10px; margin: 10px;"}
+	=link_to "Crear nuevo tipo de cupon", "#", class: :new_store_type
+
+#update_form{style: "display: none; padding: 10px; margin: 10px;"}
+	=form_tag update_store_type_path, remote: :true do
+		=hidden_field_tag "update_id"
+		.formField
+			=label_tag "new_name","Nuevo Nombre: "
+			=text_field_tag "new_name"
+		.formField
+			=submit_tag
+
+#new_form{style: "display: none; padding: 10px; margin: 10px;"}
+	=form_tag create_store_type_path, remote: :true do
+		.formField
+			=label_tag "name", "Nombre: "
+			=text_field_tag "name"
+		.formField
+			=submit_tag

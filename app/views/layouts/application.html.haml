@@ -1,0 +1,11 @@
+!!!DOCTYPE 5
+%html{ lang: "en"}
+	%head
+		= stylesheet_link_tag "application", media: "all"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+	%body
+		#navbar
+			= render "layouts/navigation_bar"
+		#content
+			= yield

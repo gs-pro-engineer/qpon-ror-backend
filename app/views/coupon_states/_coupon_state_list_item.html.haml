@@ -1,0 +1,9 @@
+%tr
+	%td
+		%span=cs.name
+	%td
+		%span
+			=link_to "Editar", "#", class: "editCouponState", data: {id: cs.id}
+	%td
+		%span
+			=link_to "Eliminar", destroy_coupon_state_path(cs.id), remote: :true, class: "destroyCouponState"

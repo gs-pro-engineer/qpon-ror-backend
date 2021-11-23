@@ -1,0 +1,8 @@
+%tr
+	%td
+		%span=ct.name
+	%td
+		%span
+			=link_to "Editar", "#", class: "editCouponType", data: {id: ct.id}
+	%td
+		%span=link_to "Eliminar", "#", remote: :true

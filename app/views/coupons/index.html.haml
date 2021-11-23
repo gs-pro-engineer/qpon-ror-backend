@@ -1,0 +1,21 @@
+%h1 Coupons
+
+%ul
+	%li
+		=link_to "Nuevo Cupon", new_coupon_path
+
+%table	
+	%thead
+		%tr
+			%td Nombre
+			%td Descripcion
+			%td Fecha de Inicio
+			%td Fecha de fin
+			%td Descuento
+			%td Tipo de Cupon
+			%td Estado del cupon
+	%tbody
+		- @coupons.each do |coupon|
+			%tr
+				%td 
+					=link_to coupon.name, coupon

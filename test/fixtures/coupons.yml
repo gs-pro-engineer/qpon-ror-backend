@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: 
+  start_date: 
+  end_date: 
+  discount: 
+  coupon_type_id: 
+  coupon_state_id: 
+  admin_id: 
+  consortium_id: 1
+
+two:
+  name: MyString
+  description: 
+  start_date: 
+  end_date: 
+  discount: 
+  coupon_type_id: 
+  coupon_state_id: 
+  admin_id: 
+  consortium_id: 1

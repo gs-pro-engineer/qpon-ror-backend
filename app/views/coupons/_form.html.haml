@@ -1,0 +1,11 @@
+=form_for(@coupon) do |f|
+	- if @coupon.errors.any?
+		%ul
+			-@coupon.errors.full_messages.each do |msg|
+				%li
+					=msg
+	.part
+		=f.label :name
+		=f.text_field :name
+	.part
+		=f.submit

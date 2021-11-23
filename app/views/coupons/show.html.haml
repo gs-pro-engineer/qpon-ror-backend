@@ -1,0 +1,15 @@
+- unless notice.nil? || notice.empty?
+	%p
+		=notice
+
+%p
+	%span 
+		=@coupon.name
+
+%ul
+	%li
+		=link_to "Volver", coupons_path
+	%li
+		=link_to "Editar", edit_coupon_path(@coupon)
+	%li
+		=link_to "Borrar", @coupon, method: :delete, data: { confirm: "de veritaz?" }

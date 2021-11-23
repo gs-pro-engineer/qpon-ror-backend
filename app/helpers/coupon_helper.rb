@@ -1,0 +1,2 @@
+module CouponHelper
+end

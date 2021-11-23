@@ -1,0 +1,13 @@
+%h1 Coupons
+
+%table	
+	%thead
+		%tr
+			%td Nombre
+			%td Descripcion
+			%td Fecha de Inicio
+			%td Fecha de fin
+			%td Descuento
+			%td Tipo de Cupon
+			%td Estado del cupon
+	- @coupons.each do |coupon|

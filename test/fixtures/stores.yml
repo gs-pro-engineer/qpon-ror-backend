@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  address: MyString
+  mail: MyString
+  reference: 
+  has_parking: 
+  has_valet: 
+  store_type_id: 
+  consortium_id: 1
+
+two:
+  name: MyString
+  address: MyString
+  mail: MyString
+  reference: 
+  has_parking: 
+  has_valet: 
+  store_type_id: 
+  consortium_id: 1

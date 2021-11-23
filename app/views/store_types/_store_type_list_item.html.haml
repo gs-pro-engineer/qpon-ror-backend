@@ -1,0 +1,9 @@
+%tr
+	%td
+		%span=s.name
+	%td
+		%span
+			=link_to "Editar", "#", class: "editStoreType", data: {id: s.id}
+	%td
+		%span
+			=link_to "Eliminar", destroy_store_type_path(s.id), remote: :true, class: "destroyStoreType"
